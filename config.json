@@ -1,0 +1,28 @@
+{
+    "token": "TON_TOKEN_ICI",
+    "prefix": ".",
+    "cooldown": 3,
+
+    "serverID": "ID_DU_SERVEUR",
+
+    "Role_Administrateur": "ID_DU_ROLE_ADMIN",
+    "Role_Staff":          "ID_DU_ROLE_STAFF",
+
+    "Salon_Verif_Pub":          "ID_SALON_VERIFICATION",
+    "Salon_Sanction":           "ID_SALON_SANCTION",
+    "Salon_leaderboard":        "ID_SALON_LEADERBOARD",
+    "Salon_Logs_Verif_valide":  "ID_SALON_LOGS_VALIDATIONS",
+    "Salon_Logs_Verif_refuser": "ID_SALON_LOGS_REFUS",
+    "Salon_Logs_Demarrage":     "ID_SALON_LOGS_DEMARRAGE",
+    "Salon_commande_bot":       "ID_SALON_LOGS_COMMANDES",
+
+    "color_principal":   "7700ff",
+    "color_sanction":    "ff0004",
+    "color_automessage": "7700ff",
+
+    "emoji_automsg": "📢",
+    "emoji_bot":     "🐺",
+    "emoji_warning": "⚠️",
+    "emoji_actif":   "✅",
+    "emoji_inactif": "❌"
+}

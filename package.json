@@ -1,0 +1,15 @@
+{
+  "name": "orpheapub",
+  "version": "1.0.0",
+  "description": "Bot Discord de vérification des publicités - MatgordFR",
+  "license": "ISC",
+  "author": "MatgordFR",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "discord.js": "^14.26.3"
+  }
+}
