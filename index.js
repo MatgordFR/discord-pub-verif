@@ -1,7 +1,32 @@
 const { Client, GatewayIntentBits, Partials, Collection } = require("discord.js")
-const config = require("./config.json")
 const fs = require("fs")
 const path = require("path")
+
+//|▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬| Chargement & validation config |▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬|
+
+let config;
+try {
+    config = require("./config.json");
+} catch {
+    console.error("[CONFIG] config.json introuvable ou illisible.");
+    console.error("[CONFIG] Copie config.example.json vers config.json et remplis-le.");
+    process.exit(1);
+}
+
+const requis = ["token", "serverID", "Salon_Verif_Pub"];
+const manquants = requis.filter(k => !config[k] || String(config[k]).trim() === "");
+if (config.token === "TON_TOKEN_ICI") manquants.push("token (c'est encore la valeur d'exemple)");
+if (manquants.length) {
+    console.error(`[CONFIG] config.json invalide — clés manquantes ou vides : ${manquants.join(", ")}.`);
+    console.error("[CONFIG] Copie config.example.json vers config.json et remplis-le.");
+    process.exit(1);
+}
+
+// Normalise les couleurs d'embed : accepte "RRGGBB" ou "#RRGGBB", sinon blurple Discord par défaut.
+for (const k of ["color_principal", "color_sanction", "color_automessage"]) {
+    const v = String(config[k] ?? "").trim();
+    config[k] = /^#?[0-9a-fA-F]{6}$/.test(v) ? "#" + v.replace(/^#/, "") : "#5865F2";
+}
 
 const client = new Client({
     allowedMentions: { parse: ['users', 'roles'], repliedUser: true },

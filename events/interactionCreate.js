@@ -1,11 +1,18 @@
 const { EmbedBuilder } = require('discord.js');
 const client = require("../index");
 const config = require("../config.json");
-const pub = require("../data/top_verif_pub.json");
 const fs = require("fs");
 const path = require("path");
 
 const PUB_PATH = path.join(__dirname, "../data/top_verif_pub.json");
+
+let pub;
+try {
+    pub = JSON.parse(fs.readFileSync(PUB_PATH, "utf8"));
+} catch {
+    console.error("[interactionCreate] Impossible de lire top_verif_pub.json, démarrage avec un objet vide.");
+    pub = {};
+}
 
 const RAISONS_REFUS = {
     "refus_tos":    "Non-respect des TOS Discord.",

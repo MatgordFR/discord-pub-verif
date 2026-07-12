@@ -16,9 +16,9 @@
     "Salon_Logs_Demarrage":     "ID_SALON_LOGS_DEMARRAGE",
     "Salon_commande_bot":       "ID_SALON_LOGS_COMMANDES",
 
-    "color_principal":   "7700ff",
-    "color_sanction":    "ff0004",
-    "color_automessage": "7700ff",
+    "color_principal":   "#7700ff",
+    "color_sanction":    "#ff0004",
+    "color_automessage": "#7700ff",
 
     "emoji_automsg": "📢",
     "emoji_bot":     "🐺",
