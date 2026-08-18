@@ -5,7 +5,7 @@
 **Un bot Discord qui met chaque publicité postée en file de validation staff — avec logs, sanctions automatiques et leaderboard des vérificateurs.**
 
 ![Licence ISC](https://img.shields.io/badge/Licence-ISC-blue?style=flat-square)
-![Node.js ≥18](https://img.shields.io/badge/Node.js-%E2%89%A518-339933?style=flat-square&logo=node.js&logoColor=white)
+![Node.js ≥22](https://img.shields.io/badge/Node.js-%E2%89%A522-339933?style=flat-square&logo=node.js&logoColor=white)
 ![discord.js v14](https://img.shields.io/badge/discord.js-v14-5865F2?style=flat-square&logo=discord&logoColor=white)
 ![Vérification de pubs](https://img.shields.io/badge/Vérification-Publicités-7700ff?style=flat-square)
 [![by MatgordFR](https://img.shields.io/badge/by-MatgordFR-121011?style=flat-square&logo=github&logoColor=white)](https://github.com/MatgordFR)
@@ -39,12 +39,19 @@
 
 ## 🧩 Prérequis
 
-- **[Node.js 18+](https://nodejs.org/)** (`node -v` pour vérifier).
+- **[Node.js 22+](https://nodejs.org/)** (`node -v` pour vérifier).
 - Un **bot Discord** créé sur le [Discord Developer Portal](https://discord.com/developers/applications).
 - Les **Privileged Gateway Intents** activés dans le portail :
   - ✅ **Server Members Intent**
   - ✅ **Message Content Intent** (indispensable : le bot lit le contenu des pubs)
 - Les commandes sont à **préfixe** (`.` par défaut) : **aucun enregistrement de slash commands n'est nécessaire**.
+
+> ⚠️ **Pourquoi 22 et pas 18.** Ce dépôt annonçait « Node.js 18+ » jusqu'au 18/08/2026.
+> Vérifié ce jour-là sur le calendrier officiel de Node : la ligne **18 n'est plus
+> maintenue depuis le 30/04/2025**, et la **20 depuis le 30/04/2026** — plus aucun
+> correctif de sécurité sur ni l'une ni l'autre. Installer ce bot sur Node 18 revenait
+> à faire tourner un jeton Discord sur un runtime laissé sans correctif depuis 15 mois.
+
 
 ---
 
